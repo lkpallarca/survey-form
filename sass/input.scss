@@ -1,0 +1,221 @@
+$main-indent: 150px;
+$sub-indent: 50px;
+$top-space: 10px;
+$b-radius: 10px;
+$width: 500px;
+$height: 20px;
+$transform: scale(1.2);
+$transition: transform 0.4s;
+$color:white;
+
+%bot-space {
+    margin-bottom: 0;
+}
+
+%resize-n {
+    resize: none;
+}
+
+%b-none {
+    border: none;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    font-family: Dongle;
+    font-size: 20px;
+    user-select: none;
+    background-size: 300px;
+    background-position: 950px 450px;
+    background-color: rgb(3, 50, 0);
+}
+
+body {
+    margin: $top-space;
+    color: $color;
+}
+
+.title {
+    margin-left: $main-indent;
+    margin-top: calc(#{$top-space} - 20px);
+    @extend %bot-space;
+}
+
+.description {
+    margin-left: $main-indent;
+    margin-top: calc(#{$top-space} - 20px);
+    @extend %bot-space;
+}
+
+.survey-form {
+    margin-left: $main-indent;
+}
+
+body::before {
+    content: "";
+    background-color: rgb(29, 176, 0);
+    padding: 290px 300px;
+    position: relative;
+    left: 100px;
+    top: 302px;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: -10px 10px 5px 2px rgb(231, 208, 29);
+}
+
+.personal-info {
+    @extend %flex-column;
+    margin-top: calc(#{$top-space} + 5px);
+}
+
+.additional-info {
+    @extend %flex-column;
+    margin-top: calc(#{$top-space} + 5px);
+}
+
+.symptoms {
+    @extend %flex-column;
+    margin-top: calc(#{$top-space} - 15px);
+}
+
+.symptoms-choices {
+    margin-left: $sub-indent;
+    margin-top: calc(#{$top-space} - 30px);
+    width: 27.5%;
+}
+
+.swab-choices {
+    margin-left: $sub-indent;
+    margin-top: calc(#{$top-space} - 30px);
+    width: 27.5%;
+}
+
+.swab {
+    margin-top: calc(#{$top-space} - 20px);
+}
+
+.questions {
+    p {
+        margin-top: calc(#{$top-space} - 8px);
+        margin-left: $sub-indent;
+        @extend %bot-space;
+    }
+}
+
+#residence {
+    @extend %resize-n;
+}
+
+#comments {
+    @extend %resize-n;
+}
+
+#name {
+    width: calc(#{$width} - 255px);
+    height: $height;
+}
+
+#email {
+    width: calc(#{$width} - 235px);
+    height: $height;
+}
+
+#number {
+    width: calc(#{$width} - 380px);
+    height: $height;
+}
+
+#comments {
+    width: $width;
+    height: calc(#{$height} + 20px);
+}
+
+#residence {
+    width: $width;
+    height: $height;
+}
+
+#gender {
+    width: calc(#{$width} - 355px);
+    height: $height;
+}
+
+#submit {
+    margin-top: $top-space;
+}
+
+input {
+    border-radius: calc(#{$b-radius} - 5px);
+    @extend %b-none;
+}
+
+textarea {
+    border-radius: calc(#{$b-radius} - 5px);
+    @extend %b-none;
+}
+
+button {
+    border-radius: calc(#{$b-radius} - 5px);
+    @extend %b-none;
+}
+
+select {
+    border-radius: calc(#{$b-radius} - 5px);
+    @extend %b-none;
+}
+
+.frontliner {
+    width: calc(#{$width} - 200px);
+    z-index: 3;
+    position: absolute;
+    left: 905px;
+    top: 430px;
+    transition: $transition;
+}
+
+.pque-logo {
+    z-index: 3;
+    width: calc(#{$width} - 300px);
+    position: absolute;
+    left: 950px;
+    top: 205px;
+    transition: $transition;
+}
+
+.san-isidro-logo {
+    z-index: 3;
+    width: calc(#{$width} - 350px);
+    position: absolute;
+    left: 972.5px;
+    top: 30px;
+    transition: $transition;
+}
+
+.san-isidro-logo:hover {
+    transform: $transform;
+}
+
+.frontliner:hover {
+    transform: $transform;
+}
+
+.pque-logo:hover {
+    transform: $transform;
+}
+
+#submit:hover {
+    transform: $transform;
+}
+
+#submit {
+    color: white;
+    background-color: rgb(3, 50, 0);
+    width: calc(#{$width} - 350px);
+    height: calc(#{$height} + 8px);
+    border-radius: calc(#{$b-radius} + 30px);
+    transition: $transition;
+}

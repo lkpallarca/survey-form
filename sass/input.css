@@ -1,0 +1,217 @@
+.title, .description, .questions p {
+  margin-bottom: 0;
+}
+
+#residence, #comments {
+  resize: none;
+}
+
+input, textarea, button, select {
+  border: none;
+}
+
+.personal-info, .additional-info, .symptoms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html {
+  font-family: Dongle;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-size: 300px;
+  background-position: 950px 450px;
+  background-color: #033200;
+}
+
+body {
+  margin: 10px;
+  color: white;
+}
+
+.title {
+  margin-left: 150px;
+  margin-top: calc(10px - 20px);
+}
+
+.description {
+  margin-left: 150px;
+  margin-top: calc(10px - 20px);
+}
+
+.survey-form {
+  margin-left: 150px;
+}
+
+body::before {
+  content: "";
+  background-color: #1db000;
+  padding: 290px 300px;
+  position: relative;
+  left: 100px;
+  top: 302px;
+  z-index: -1;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px 10px 5px 2px #e7d01d;
+          box-shadow: -10px 10px 5px 2px #e7d01d;
+}
+
+.personal-info {
+  margin-top: calc(10px + 5px);
+}
+
+.additional-info {
+  margin-top: calc(10px + 5px);
+}
+
+.symptoms {
+  margin-top: calc(10px - 15px);
+}
+
+.symptoms-choices {
+  margin-left: 50px;
+  margin-top: calc(10px - 30px);
+  width: 27.5%;
+}
+
+.swab-choices {
+  margin-left: 50px;
+  margin-top: calc(10px - 30px);
+  width: 27.5%;
+}
+
+.swab {
+  margin-top: calc(10px - 20px);
+}
+
+.questions p {
+  margin-top: calc(10px - 8px);
+  margin-left: 50px;
+}
+
+#name {
+  width: calc(500px - 255px);
+  height: 20px;
+}
+
+#email {
+  width: calc(500px - 235px);
+  height: 20px;
+}
+
+#number {
+  width: calc(500px - 380px);
+  height: 20px;
+}
+
+#comments {
+  width: 500px;
+  height: calc(20px + 20px);
+}
+
+#residence {
+  width: 500px;
+  height: 20px;
+}
+
+#gender {
+  width: calc(500px - 355px);
+  height: 20px;
+}
+
+#submit {
+  margin-top: 10px;
+}
+
+input {
+  border-radius: calc(10px - 5px);
+}
+
+textarea {
+  border-radius: calc(10px - 5px);
+}
+
+button {
+  border-radius: calc(10px - 5px);
+}
+
+select {
+  border-radius: calc(10px - 5px);
+}
+
+.frontliner {
+  width: calc(500px - 200px);
+  z-index: 3;
+  position: absolute;
+  left: 905px;
+  top: 430px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.pque-logo {
+  z-index: 3;
+  width: calc(500px - 300px);
+  position: absolute;
+  left: 950px;
+  top: 205px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.san-isidro-logo {
+  z-index: 3;
+  width: calc(500px - 350px);
+  position: absolute;
+  left: 972.5px;
+  top: 30px;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.san-isidro-logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.frontliner:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.pque-logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#submit:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#submit {
+  color: white;
+  background-color: #033200;
+  width: calc(500px - 350px);
+  height: calc(20px + 8px);
+  border-radius: calc(10px + 30px);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+/*# sourceMappingURL=input.css.map */

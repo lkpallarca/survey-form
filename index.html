@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/my-logo/favicon.ico" >
+    <link rel="icon" type="image/gif" href="/my-logo/animated_favicon1.gif" >
+    <link rel="stylesheet" href="/sass/input.css">
+    <title>Brgy. San Isidro Health Center Contact Tracing Form</title>
+</head>
+<body>    
+    <h1 class="title"> <!-- user story 1-->
+        Contact Tracing form for LGU Monitoring
+    </h1>
+
+    <p class="description"> <!-- user story 2-->
+        Please fill in your information and we'll contact you as soon as possible.
+    </p>
+
+    <form class="survey-form" action="" method="get"> <!-- user story 3--> <!-- user story 17-->
+        <section class="personal-info">
+            <div>
+                <label id="name-label" for="name"> <!-- user story 10-->
+                    Full Name
+                </label>
+                <input type="text" id="name" name="fullname" placeholder="Ex. Lance Kennard M. Pallarca"> <!-- user story 4--> <!-- user story 11-->
+
+                <label id="gender-label" for="gender">
+                    Gender
+                </label>
+
+                <select id="gender" name="gender"> <!-- user story 12-->
+                    <option value="male">Male</option>
+                    <option value="antigen">Female</option>
+                    <option value="other">Prefer not to answer</option>
+                </select>
+            </div>
+
+            <div>
+                <label id="number-label" for="number"> <!-- user story 10--> 
+                    Contact No.
+                </label>
+                <input type="text" id="number" name="contactnumber" placeholder="Ex. 09473245781" pattern="[+0-9]+[0-9]+"  minlength="11" maxlength="13" title="Please enter numbers or (+) sign only, 11 to 13 digits  Ex.09174726879 or +639174726879"> <!-- user story 7--> <!-- user story 8--> <!-- user story 9--> <!-- user story 11-->
+
+
+                <label id="email-label" for="email"> <!-- user story 10-->
+                    Email
+                </label>
+                <input type="email" id="email" name="emailaddress" placeholder="Ex. kencepallarca@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ex. kencepallarca@gmail.com"> <!-- user story 5--> <!-- user story 6--> <!-- user story 11-->
+            </div>
+           
+            <label id="residence-label" for="residence">
+                Current Address
+            </label>
+            <!-- user story 15--> <textarea id="residence" name="residence" cols="30" rows="10" placeholder="Ex. House No., Lot Blk, Street, Subdivision, Brgy."></textarea>
+        </section>
+
+        <section class="symptoms">
+            <p>Are you experiencing these symptoms? Please select all that apply.</p>
+
+            <div class="symptoms-choices">
+                <label for="cough">Cough</label>
+                <input type="checkbox" id="cough" name="symptoms" value="cough">
+                
+                <label for="cold">Cold</label>
+                <input type="checkbox" id="cold" name="symptoms" value="cold"> <!-- user story 14-->
+
+                <label for="sore-throat">Sore Throat</label>
+                <input type="checkbox" id="sore-throat" name="symptoms" value="sore-throat"> <!-- user story 14-->
+
+                <label for="body-pain">Body-Pain</label>
+                <input type="checkbox" id="body-pain" name="symptoms" value="body-pain"> <!-- user story 14-->
+
+                <label for="diarrhea">Diarrhea</label>
+                <input type="checkbox" id="diarrhea" name="symptoms" value="diarrhea"> <!-- user story 14-->
+
+                <label for="loss-of-taste-and-smell">Loss of Taste and Smell</label>
+                <input type="checkbox" id="loss-of-taste-and-smell" name="symptoms" value="loss-of-taste-and-smell"> <!-- user story 14-->
+
+                <label for="others">Others</label>
+                <input type="checkbox" id="others" name="symptoms" value="others"> <!-- user story 14-->
+            </div>
+        </section>
+
+        <section class="swab">
+            <p>Have you taken a swab test? Please select which one applies.</p>
+            
+            <div class="swab-choices">
+                <label for="rt-pcr">RT-PCR</label>
+                <input type="radio" id="rt-pcr" name="swab"> <!-- user story 13-->
+
+                <label for="antigen">Antigen</label>
+                <input type="radio" id="antigen" name="swab"> <!-- user story 13-->
+
+                <label for="no-swab">No Swab yet</label>
+                <input type="radio" id="no-swab" name="swab"> <!-- user story 13-->
+            </div>
+        </section>
+
+        <section class="additional-info">
+            <label for="comments">
+                Additional Information
+            </label>
+            <div class="questions">
+                <p>When did the onset of symptoms start?</p>
+                <p>Where have you been within the last 14 days?</p>
+                <p>Will you be available to be contacted by Tracers within the next few days?</p>
+            </div>
+            <!-- user story 15--> <textarea id="comments" name="comments" cols="30" rows="10" placeholder="Please answer here the questions here"></textarea>
+        </section>
+        <button id="submit"> <!-- user story 16-->
+            Submit
+        </button>
+    </form>
+    <p>
+        <a href="https://paranaquecity.gov.ph/?page_id=1301" target="_blank"><img class="frontliner" src="/images/frontliner.png" alt="Cartoon version of frontliners"></a> 
+        <a href="https://www.facebook.com/pioparanaqueofficial/" target="_blank"><img class="pque-logo" src="/images/parañaque-city-logo.png" alt="logo of parañaque city"></a> 
+        <a href="https://www.facebook.com/NoelJaplos18" target="_blank"><img class="san-isidro-logo" src="/images/san-isidro-logo.png" alt="logo of san isidro"></a>
+    </p>
+<script src="scripts.js"></script>
+</body>
+</html>
